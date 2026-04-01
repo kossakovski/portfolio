@@ -1,0 +1,247 @@
+<svg width="680" height="900" viewBox="0 0 680 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="desk-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a3728;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a2718;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="exit-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:1" />
+    </linearGradient>
+    <!-- Metal gradients for photorealism -->
+    <linearGradient id="metal-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#151515;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="key-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a5a5a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3a3a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="key-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a6a6a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a4a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a3a3a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="chrome-shine" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="key-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Wooden desk background -->
+  <rect width="680" height="900" fill="url(#desk-wood)"/>
+  
+  <!-- Wood grain texture -->
+  <g opacity="0.15">
+    <line x1="0" y1="100" x2="680" y2="105" stroke="#2a1a0a" stroke-width="2"/>
+    <line x1="0" y1="250" x2="680" y2="253" stroke="#2a1a0a" stroke-width="1.5"/>
+    <line x1="0" y1="450" x2="680" y2="448" stroke="#2a1a0a" stroke-width="2"/>
+    <line x1="0" y1="620" x2="680" y2="625" stroke="#2a1a0a" stroke-width="1.5"/>
+    <line x1="0" y1="780" x2="680" y2="776" stroke="#2a1a0a" stroke-width="2"/>
+  </g>
+  
+  <!-- Typewriter with realistic shadows and depth -->
+  <g transform="translate(340, 400)" filter="url(#shadow)">
+    <!-- Main body - dark metal with gradient -->
+    <rect x="-220" y="-100" width="440" height="180" rx="10" fill="url(#metal-body)" stroke="#000" stroke-width="2"/>
+    
+    <!-- Front panel with beveled edge -->
+    <rect x="-210" y="-90" width="420" height="160" rx="8" fill="#1a1a1a"/>
+    <rect x="-205" y="-85" width="410" height="150" rx="6" fill="#252525"/>
+    
+    <!-- Top cover - curved with highlight -->
+    <ellipse cx="0" cy="-100" rx="200" ry="40" fill="url(#metal-body)" stroke="#000" stroke-width="2"/>
+    <ellipse cx="0" cy="-103" rx="190" ry="35" fill="#2a2a2a"/>
+    <!-- Chrome highlight on top -->
+    <ellipse cx="0" cy="-110" rx="180" ry="20" fill="url(#chrome-shine)"/>
+    
+    <!-- Paper roller with metallic finish -->
+    <rect x="-200" y="-140" width="400" height="30" rx="15" fill="url(#metal-body)" stroke="#000" stroke-width="1.5"/>
+    <ellipse cx="-200" cy="-125" rx="8" ry="15" fill="#1a1a1a"/>
+    <ellipse cx="200" cy="-125" rx="8" ry="15" fill="#1a1a1a"/>
+    
+    <!-- Roller knob -->
+    <circle cx="210" cy="-125" r="18" fill="url(#key-gradient)" stroke="#0a0a0a" stroke-width="1.5"/>
+    <circle cx="210" cy="-127" r="12" fill="#3a3a3a"/>
+    
+    <!-- Carriage return lever with chrome -->
+    <path d="M 220,-70 L 235,-70 L 240,10 L 225,10 Z" fill="url(#metal-body)" stroke="#000" stroke-width="1"/>
+    <circle cx="232.5" cy="-75" r="12" fill="url(#key-gradient)" stroke="#0a0a0a" stroke-width="1"/>
+    <circle cx="232.5" cy="-77" r="8" fill="#4a4a4a"/>
+    
+    <!-- Correct Russian ЙЦУКЕН keyboard layout -->
+    <!-- Row 1: Й Ц У К Е Н Г Ш Щ З Х -->
+    <g filter="url(#key-shadow)">
+      <!-- Muted keys Row 1 -->
+      <rect x="-195" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-168" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-141" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-114" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-87" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-60" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-33" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-6" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="21" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="48" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="75" y="-35" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      
+      <!-- Row 2: Ф Ы В А П Р О Л Д Ж Э (ФЫВАПРОЛ highlighted!) -->
+      <!-- Ф -->
+      <rect x="-185" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-184" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- Ы -->
+      <rect x="-158" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-157" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- В -->
+      <rect x="-131" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-130" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- А -->
+      <rect x="-104" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-103" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- П -->
+      <rect x="-77" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-76" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- Р -->
+      <rect x="-50" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-49" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- О -->
+      <rect x="-23" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="-22" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      <!-- Л -->
+      <rect x="4" y="-5" width="24" height="24" rx="3" fill="url(#key-highlight)" stroke="#2a2a2a" stroke-width="0.8"/>
+      <rect x="5" y="-6" width="22" height="2" fill="#5a5a5a" opacity="0.5"/>
+      
+      <!-- Muted keys after Л -->
+      <rect x="31" y="-5" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="58" y="-5" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="85" y="-5" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      
+      <!-- Row 3: Я Ч С М И Т Ь Б Ю -->
+      <rect x="-175" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-148" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-121" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-94" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-67" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-40" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="-13" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="14" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+      <rect x="41" y="25" width="24" height="24" rx="3" fill="url(#key-gradient)" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
+    </g>
+    
+    <!-- Letters on ФЫВАПРОЛ keys - Row 2 -->
+    <g font-family="'Courier New', monospace" font-size="16" font-weight="700" fill="#e8e8e8" text-anchor="middle">
+      <text x="-173" y="13">Ф</text>
+      <text x="-146" y="13">Ы</text>
+      <text x="-119" y="13">В</text>
+      <text x="-92" y="13">А</text>
+      <text x="-65" y="13">П</text>
+      <text x="-38" y="13">Р</text>
+      <text x="-11" y="13">О</text>
+      <text x="16" y="13">Л</text>
+    </g>
+    
+    <!-- SPACEBAR as neon EXIT sign with realistic depth -->
+    <rect x="-130" y="60" width="260" height="32" rx="4" fill="#0a0a0a" stroke="#000" stroke-width="2"/>
+    <rect x="-125" y="63" width="250" height="26" rx="3" fill="#050505"/>
+    <!-- Highlight on spacebar edge -->
+    <rect x="-125" y="63" width="250" height="3" rx="2" fill="#1a1a1a" opacity="0.5"/>
+    
+    <!-- EXIT text with glow -->
+    <text x="0" y="82" text-anchor="middle" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="url(#exit-glow)" letter-spacing="10">EXIT</text>
+    <text x="0" y="82" text-anchor="middle" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#00ff88" opacity="0.5" letter-spacing="10">EXIT</text>
+    <!-- Glow halo -->
+    <ellipse cx="0" cy="78" rx="60" ry="15" fill="#00ff88" opacity="0.15"/>
+    
+    <!-- Brand plate with embossed effect -->
+    <rect x="-60" y="-95" width="120" height="16" rx="2" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="0.5"/>
+    <text x="0" y="-83" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#888" letter-spacing="3">UNDERWOOD</text>
+  </g>
+  
+  <!-- Paperclips with realistic shadows -->
+  <g>
+    <!-- Paperclip 1 - top left -->
+    <g transform="rotate(-15 95 155)" filter="url(#key-shadow)">
+      <path d="M 80,150 Q 75,145 80,140 L 110,140 Q 115,145 110,150 L 95,165 Q 90,170 85,165 L 85,145" 
+            fill="none" stroke="#999" stroke-width="3.5"/>
+      <path d="M 80,150 Q 75,145 80,140 L 110,140 Q 115,145 110,150 L 95,165 Q 90,170 85,165 L 85,145" 
+            fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="95" cy="155" r="3.5" fill="#999"/>
+      <circle cx="95" cy="154" r="2" fill="#bbb"/>
+    </g>
+    
+    <!-- Paperclip 2 - top right -->
+    <g transform="rotate(25 565 185)" filter="url(#key-shadow)">
+      <path d="M 550,180 Q 545,175 550,170 L 580,170 Q 585,175 580,180 L 565,195 Q 560,200 555,195 L 555,175" 
+            fill="none" stroke="#999" stroke-width="3.5"/>
+      <path d="M 550,180 Q 545,175 550,170 L 580,170 Q 585,175 580,180 L 565,195 Q 560,200 555,195 L 555,175" 
+            fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="565" cy="185" r="3.5" fill="#999"/>
+      <circle cx="565" cy="184" r="2" fill="#bbb"/>
+    </g>
+    
+    <!-- Paperclip 3 - bottom left -->
+    <g transform="rotate(45 135 685)" filter="url(#key-shadow)">
+      <path d="M 120,680 Q 115,675 120,670 L 150,670 Q 155,675 150,680 L 135,695 Q 130,700 125,695 L 125,675" 
+            fill="none" stroke="#999" stroke-width="3.5"/>
+      <path d="M 120,680 Q 115,675 120,670 L 150,670 Q 155,675 150,680 L 135,695 Q 130,700 125,695 L 125,675" 
+            fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="135" cy="685" r="3.5" fill="#999"/>
+      <circle cx="135" cy="684" r="2" fill="#bbb"/>
+    </g>
+    
+    <!-- Paperclip 4 - bottom right -->
+    <g transform="rotate(-20 535 725)" filter="url(#key-shadow)">
+      <path d="M 520,720 Q 515,715 520,710 L 550,710 Q 555,715 550,720 L 535,735 Q 530,740 525,735 L 525,715" 
+            fill="none" stroke="#999" stroke-width="3.5"/>
+      <path d="M 520,720 Q 515,715 520,710 L 550,710 Q 555,715 550,720 L 535,735 Q 530,740 525,735 L 525,715" 
+            fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="535" cy="725" r="3.5" fill="#999"/>
+      <circle cx="535" cy="724" r="2" fill="#bbb"/>
+    </g>
+    
+    <!-- Paperclip 5 - near typewriter -->
+    <g transform="rotate(60 462 285)" filter="url(#key-shadow)">
+      <path d="M 450,280 Q 445,275 450,270 L 475,270 Q 480,275 475,280 L 462.5,292 Q 457.5,297 452.5,292 L 452.5,275" 
+            fill="none" stroke="#999" stroke-width="3.5"/>
+      <path d="M 450,280 Q 445,275 450,270 L 475,270 Q 480,275 475,280 L 462.5,292 Q 457.5,297 452.5,292 L 452.5,275" 
+            fill="none" stroke="#bbb" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="462" cy="285" r="3.5" fill="#999"/>
+      <circle cx="462" cy="284" r="2" fill="#bbb"/>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="340" y="120" text-anchor="middle" font-family="'Courier New', monospace" font-size="78" font-weight="700" fill="#e8e8e8" letter-spacing="6">ФЫВАПРОЛ</text>
+  
+  <!-- Subtitle -->
+  <text x="340" y="180" text-anchor="middle" font-family="'Courier New', monospace" font-size="21" font-weight="400" fill="#a8a8a8" letter-spacing="2">РЫЦАРЬ СИСАДМИННОГО ОБРАЗА</text>
+  
+  <!-- Author -->
+  <text x="340" y="850" text-anchor="middle" font-family="'Courier New', monospace" font-size="23" font-weight="400" fill="#999">ДЖАСТ КИДИН</text>
+</svg>
